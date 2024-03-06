@@ -79,8 +79,31 @@ except FileNotFoundError as erro:
     print("arquivo inexistente")
     print("descrição", erro) '''
 
-try:
+'''try:
     f = open("novo2.txt","r")
     f.write("hello")
 except IOError as erro:
-    print("O erro foi", erro)
+    print("O erro foi", erro)'''
+
+
+with open("notas.txt", "w") as f:
+    for nome.nota in notas:
+        f.write(f"nome:{nome}, Nota:{nota}\n")
+
+
+with open("notas.txt", "r") as f:
+    for linha in f:
+        print(f.seek(0))
+        print(f.read())
+
+try:
+    with open("novas_notas" , "r") as arquivo:
+        arquivo.read
+except FileNotFoundError:
+    print("aquivo inexistente")
+
+try:
+    open("notas.txt", "r") as arquivo:
+    arquivo.writelines(['Yaggo.10,10'])
+except IOError:
+        print("sem permissão")
